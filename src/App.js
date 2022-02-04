@@ -212,24 +212,9 @@ function App() {
 
   useEffect(() => { document.body.style.backgroundColor = 'lightblue' }, [])
 
-  const myLabels = ["monday", "tuesday", "wednesday", "thursday", "friday"];
-  const [data, setData] = useState({});
-  useEffect(() => {
-    setData({
-      labels: myLabels,
-      datasets: [
-        {
-          label: "The Level",
-          data: [21, 53, 65, 12, 32]
-        }
-      ]
-    });
-  }, []);
-  console.log(data.datasets);
 
 
   return (
-
     <Container>
       <h1 style={{ color: "black" }, { textAlign: 'center' }} >MY GPA</h1>
       <Row>
@@ -278,8 +263,8 @@ function App() {
             </div>
 
             <Form.Group className="mb-3" as={Col} controlId="allgpa">
-              <Form.Label>MY GPAC</Form.Label>
-              <Form.Control type="string" placeholder="Add for calcuting GPAC" ref={allgpaRef} />
+              <Form.Label>MY GPAX</Form.Label>
+              <Form.Control type="string" placeholder="Add for calcuting GPAX" ref={allgpaRef} />
             </Form.Group>
           </Form>
 
@@ -295,21 +280,12 @@ function App() {
         <Table6 data={dataItems22021} setDataItems={setdataItems22021} />
         <Table9 data={dataItems32021} setDataItems={setdataItems32021} />
 
-
-
-        <div style={{ height: "500px", width: "500px" }}>
-        <h3> Charts</h3>
-          {/* {data.datasets ? <Line data={data} /> : ""} */}
-        </div>
-
-
-
-
+        
       </Row>
     </Container>
 
 
   )
 }
-
 export default App;
+
